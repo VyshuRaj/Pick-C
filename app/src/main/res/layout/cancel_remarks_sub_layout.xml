@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/appThemeBgColorDark"
+    android:id="@+id/mainLL"
+    android:padding="5dp"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/checkBox"
+        android:buttonTint="@color/colorAccent"
+        android:layout_height="wrap_content" />
+
+    <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:padding="10dp"
+        android:text="Sample text"
+        android:layout_toRightOf="@+id/checkBox"
+        android:singleLine="true"
+        android:id="@+id/cancel_remarks_tv"
+        android:textColor="@color/appThemeTextColorLight"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

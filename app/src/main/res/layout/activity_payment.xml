@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appThemeTextHighLightColor"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/appThemeTextHighLightColor"
+        android:layout_height="match_parent">
+
+        <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+            android:id="@+id/b_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/broderline"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Booking Number"
+            android:textColor="@color/appThemeYellow"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/broderline"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Amount"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+                android:id="@+id/cash_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="0.1dp"
+                android:layout_marginLeft="0.1dp"
+                android:layout_marginRight="0.1dp"
+                android:layout_marginTop="0.1dp"
+                android:background="@drawable/cashpaymentbutton"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="CASH PAYMENT"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/cash_button"
+                android:layout_alignLeft="@+id/cash_button"
+                android:layout_alignStart="@+id/cash_button"
+                android:layout_alignTop="@+id/cash_button"
+                android:layout_marginLeft="30dp"
+                android:elevation="10dp"
+                android:src="@drawable/cash_payments" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+
+            <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+                android:id="@+id/online_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/cashpaymentbutton"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="30dp"
+                android:text="ONLINE PAYMENT"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/online_button"
+                android:layout_alignTop="@+id/online_button"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:elevation="10dp"
+                android:src="@drawable/online_payments" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/cashpaymentbutton"
+            android:layout_margin="10dp"
+            android:elevation="10dp"
+            android:onClick="paytmNow"
+            android:layout_height="wrap_content">
+
+
+
+            <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+                android:id="@+id/paytm_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:paddingLeft="25dp"
+                android:paddingBottom="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="20dp"
+                android:layout_toRightOf="@id/imageView1"
+                android:text="PAYTM"
+                android:layout_marginLeft="22dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/paytm_button"
+                android:layout_alignTop="@+id/paytm_button"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/paytmm" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</ScrollView>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/appThemeBgColorDark"
+    android:orientation="vertical"
+    android:clickable="true">
+
+    <ScrollView
+        android:id="@+id/login_scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/sign_up_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+        <!--    <LinearLayout
+                android:id="@+id/sign_up_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">-->
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/mobile_txt_et_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/appThemeTextHintColor">
+
+                    <com.prts.pickcustomer.customviews.PickCCustomEditText
+                        android:id="@+id/mobile_txt_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Enter mobile number"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textColorHint="@color/appThemeTextHintColor" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/password_txt_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/appThemeTextHintColor"
+                    app:passwordToggleEnabled="true">
+
+                    <com.prts.pickcustomer.customviews.PickCCustomEditText
+                        android:id="@+id/password_txt_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Password"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:maxLength="20"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textColorHint="@color/appThemeTextHintColor" />
+                </android.support.design.widget.TextInputLayout>
+          <!--  </LinearLayout>
+-->
+             <Button
+        android:id="@+id/forgot_pwd_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+                 android:layout_gravity="right"
+        android:layout_below="@+id/login_scroll_view"
+        android:layout_marginLeft="12.0dip"
+        android:background="@android:color/transparent"
+        android:onClick="forgotPassword"
+        android:padding="10dp"
+        android:text="Forgot password ?"
+        android:textColor="#0000ff"
+        android:textSize="12.0sp" />
+
+    <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+        android:id="@+id/helpTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/forgot_pwd_button"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/forgot_pwd_button"
+        android:layout_marginLeft="12.0dip"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="right"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="HELP"
+        android:onClick="help"
+        android:textColor="#0000ff"
+        android:textSize="12.0sp" />
+        </LinearLayout>
+    </ScrollView>
+
+   <!-- <Button
+        android:id="@+id/forgot_pwd_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/login_scroll_view"
+        android:layout_marginLeft="12.0dip"
+        android:background="@android:color/transparent"
+        android:onClick="forgotPassword"
+        android:padding="10dp"
+        android:text="Forgot password ?"
+        android:textColor="#0000ff"
+        android:textSize="12.0sp" />
+
+    <com.prts.pickc.customviews.PickCCustomTextVIew
+        android:id="@+id/helpTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/forgot_pwd_button"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/forgot_pwd_button"
+        android:layout_marginLeft="12.0dip"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="HELP"
+        android:onClick="help"
+        android:textColor="#0000ff"
+        android:textSize="12.0sp" />
+-->
+    <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="0dp"
+        android:background="@color/appThemeBgColorLight"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:onClick="doLogin"
+        android:text="LOGIN"
+        android:textColor="@color/appThemeYellow"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</LinearLayout>

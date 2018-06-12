@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/appThemeTextColorLight">
+
+    <ImageView
+        android:id="@+id/iv_Image"
+        android:layout_width="@dimen/height_40"
+        android:layout_height="@dimen/height_40"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:src="@drawable/vehicle_open1_selected" />
+
+
+    <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+        android:id="@+id/text1_TV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:paddingLeft="@dimen/height_40"
+        android:text="Un loading"
+        android:maxLines="1"
+        android:layout_toRightOf="@+id/iv_Image"
+        android:textSize="@dimen/text_size_12"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:textColor="@color/appThemeYellow"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

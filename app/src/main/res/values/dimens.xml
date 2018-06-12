@@ -1,0 +1,49 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="height_80">80dp</dimen>
+    <dimen name="height_50">50dp</dimen>
+    <dimen name="text_size_46">46sp</dimen>
+    <dimen name="width_150">150dp</dimen>
+    <dimen name="height_150">150dp</dimen>
+    <dimen name="margin_120_top">120dp</dimen>
+    <dimen name="text_size_40">40sp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="elevation_10dp">10dp</dimen>
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="height_40">40dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="padding_8dp">8dp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="text_size_26">26sp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="height_120">120dp</dimen>
+    <dimen name="height_45">45dp</dimen>
+    <dimen name="padding1dp">1dp</dimen>
+    <dimen name="text_size_10sp">12sp</dimen>
+    <dimen name="width_70">70dp</dimen>
+    <dimen name="padding_2">2dp</dimen>
+    <dimen name="padding_3">3dp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_8">8sp</dimen>
+    <dimen name="height_400">400dp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="height_20">20dp</dimen>
+    <dimen name="height_16">16dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="widtgh_240">240dp</dimen>
+    <dimen name="elevation_12">12dp</dimen>
+    <dimen name="margin_7">7dp</dimen>
+    <dimen name="width_60">60dp</dimen>
+    <dimen name="height_250">250dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <item name="height_154_dip" type="dimen">154dp</item>
+    <item name="height_160" type="dimen" >160dp</item>
+</resources>

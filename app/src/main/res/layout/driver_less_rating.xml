@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+
+    <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="0.1dp"
+        android:id="@+id/cancle_tv"
+        android:padding="10dp"
+        android:drawableRight="@drawable/close"
+        android:background="@color/appThemeBgColorLight"
+        android:text="Please tell us what went wrong ? "
+        android:textColor="@color/appThemeYellow"
+        android:textSize="16sp" />
+
+    <ListView
+        android:id="@+id/listViewCancelDialog"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginLeft="0.1dp"
+        android:layout_marginRight="0.1dp"
+        android:background="@color/white"
+        android:divider="@color/colorAccent"
+        android:dividerHeight="1dp"
+        android:scrollbars="none"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.1dp"
+        android:layout_marginLeft="0.1dp"
+        android:layout_marginRight="0.1dp"
+        android:background="@drawable/rate_card_bg_inner_bottom"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+
+        <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+            android:id="@+id/cancelBookingTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="0.1dp"
+            android:layout_weight="1"
+            android:background="@color/appThemeBgColorLight"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Ok"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="24sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+</LinearLayout>

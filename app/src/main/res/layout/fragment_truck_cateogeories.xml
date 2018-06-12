@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/truck_categeories_top_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="80dp">
+
+                <TextView
+                    android:id="@+id/loadingTV_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:paddingTop="2dp"
+                    android:text="Loading"
+                    android:textColor="#000"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/loadingImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/unlodingTV_2"
+                    android:layout_below="@+id/loadingTV_2"
+                    android:padding="1dp"
+                    android:src="@drawable/none_selected_open" />
+
+                <TextView
+                    android:id="@+id/unlodingTV_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:paddingBottom="2dp"
+                    android:text="Un loading"
+                    android:textColor="#000"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="25dp"
+                android:background="#000" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recylerView"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:scrollbars="horizontal"
+                android:visibility="gone" />
+
+            <GridView
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:numColumns="4"
+                android:rowCount="1" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/confirm_booking_rateCardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.1dp"
+        android:background="@color/appThemeYellow"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+            android:id="@+id/rateCardTV_confirmBookingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="0.1dp"
+            android:layout_weight="1"
+            android:background="@color/appThemeBgColorLight"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Rate Card"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+            android:id="@+id/rideEstimateTV_confirmBookingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:background="@color/appThemeBgColorLight"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Trip Estimate"
+            android:textColor="@color/appThemeYellow"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

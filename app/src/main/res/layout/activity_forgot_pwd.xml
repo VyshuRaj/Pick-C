@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/appThemeBgColorDark"
+    android:clickable="true">
+
+    <ScrollView
+        android:id="@+id/sign_up_scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_5"
+        android:layout_above="@+id/signUpTV"
+        android:layout_below="@+id/error_text_tv">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/sign_up_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textColorHint="@color/appThemeTextHintColor">
+                    <com.prts.pickcustomer.customviews.PickCCustomEditText
+                        android:id="@+id/mobile_number_txt_et"
+                        android:hint="Enter OTP *"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textColorHint="@color/appThemeTextHintColor"
+                        android:imeOptions="actionNext"
+                        android:digits="1234567890"
+                        android:inputType="phone"
+                        android:maxLength="10" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="true"
+                    android:textColorHint="@color/appThemeTextHintColor">
+
+                    <com.prts.pickcustomer.customviews.PickCCustomEditText
+                        android:id="@+id/password_txt_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Enter new password *"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:maxLength="20"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textColorHint="@color/appThemeTextHintColor" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="true"
+                    android:textColorHint="@color/appThemeTextHintColor">
+                    <com.prts.pickcustomer.customviews.PickCCustomEditText
+                        android:id="@+id/re_enter_password_txt_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/appThemeTextColorLight"
+                        android:textColorHint="@color/appThemeTextHintColor"
+                        android:ems="10"
+                        android:maxLength="20"
+                        android:hint="Re-enter new password *"
+                        android:imeOptions="actionGo"
+                        android:inputType="textPassword" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+        android:layout_width="match_parent"
+        android:elevation="@dimen/elevation_10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="@dimen/height_50"
+        android:text="@string/submit"
+        android:layout_weight="1"
+        android:textAllCaps="true"
+        android:id="@+id/signUpTV"
+        android:onClick="submit"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_18"
+        android:textStyle="normal"
+        android:textColor="@color/appThemeYellow"
+        android:background="@color/appThemeBgColorLight"
+        android:layout_marginRight="0dp"/>
+</RelativeLayout>

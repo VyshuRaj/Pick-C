@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/width_70"
+    android:layout_height="@dimen/height_80"
+    android:orientation="vertical"
+    android:id="@+id/relativeLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/miniType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:paddingTop="2dp"
+        android:text="@string/loading"
+        android:textColor="@color/black_000"
+        android:textSize="@dimen/text_size_10sp"
+        />
+
+    <ImageView
+        android:id="@+id/loadingImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/timer"
+        android:layout_below="@+id/miniType"
+        android:padding="@dimen/padding1dp"
+        android:src="@drawable/none_selected_open" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:paddingBottom="@dimen/padding_2"
+        android:text="@string/un_loading"
+        android:textColor="@color/black_000"
+        android:textSize="@dimen/text_size_10sp" />
+</RelativeLayout>
+

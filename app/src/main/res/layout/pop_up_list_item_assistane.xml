@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/appThemeTextColorLight"
+    android:paddingRight="1dp"
+    android:id="@+id/relativeLayout"
+    android:paddingBottom="1dp">
+
+    <ImageView
+        android:id="@+id/iv_Image"
+        android:layout_width="@dimen/height_40"
+        android:layout_height="@dimen/height_40"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/padding_5"
+        android:src="@drawable/vehicle_open1_selected" />
+
+    <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+        android:id="@+id/text1_TV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:layout_toRightOf="@+id/iv_Image"
+        android:text="@string/un_loading"
+        android:maxLines="1"
+        android:textSize="@dimen/text_size_10sp"
+        android:layout_centerVertical="true"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:textColor="@color/appThemeYellow" />
+
+
+</RelativeLayout>

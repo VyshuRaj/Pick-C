@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/map_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/views_linear"
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/loc_location_rellayt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+                    android:id="@+id/setLocationMarkertext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/rounded_corner_map"
+                    android:gravity="center"
+                    android:maxWidth="250dp"
+                    android:onClick="lockSelectedLocation"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp"
+                    android:text="Lock location"
+                    android:textColor="@color/appThemeYellow" />
+
+                <ImageView
+                    android:id="@+id/pinIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@drawable/source2" />
+
+            </RelativeLayout>
+        </fragment>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/location_LLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="15dp">
+
+        <RelativeLayout
+            android:id="@+id/from_location_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selected_location_rounded_corner_map"
+            android:elevation="10dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:id="@+id/from_location_imageVIew"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/from_location_horizentalScrollView"
+                android:layout_alignTop="@+id/from_location_horizentalScrollView"
+                android:onClick="zoomPickUpLocation"
+                android:padding="2dp"
+                android:src="@drawable/green_flag" />
+
+            <HorizontalScrollView
+                android:id="@+id/from_location_horizentalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/edit_from_location_imageVIew"
+                android:layout_toRightOf="@+id/from_location_imageVIew"
+                android:fillViewport="true"
+                android:paddingRight="10dp">
+
+                <com.prts.pickcustomer.customviews.PickCCustomEditText
+                    android:id="@+id/from_lcation_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:focusableInTouchMode="false"
+                    android:gravity="left|center"
+                    android:hint="Cargo pick up location"
+                    android:maxLines="1"
+                    android:onClick="pickUpSrcLocation"
+                    android:padding="2dp"
+                    android:scrollbars="horizontal"
+                    android:text=""
+                    android:textColor="@color/appThemeTextColorLight"
+                    android:textColorHint="@color/appThemeTextHintColor"
+                    android:textSize="14sp" />
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/lock_from_location_imageVIew"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_alignBottom="@+id/from_location_horizentalScrollView"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/from_location_horizentalScrollView"
+                android:background="@color/appThemeBgColorDark"
+                android:onClick="unLockPickUpLocation"
+                android:padding="1dp"
+                android:src="@drawable/unlock"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/edit_from_location_imageVIew"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/from_location_horizentalScrollView"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/from_location_horizentalScrollView"
+                android:background="#88ffffff"
+                android:padding="18dp"
+                android:src="@drawable/edit"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/to_location_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.1dp"
+            android:background="@drawable/selected_location_rounded_corner_map"
+            android:elevation="10dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:id="@+id/to_location_imageVIew"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/to_location_horizentalScrollView"
+                android:layout_alignTop="@+id/to_location_horizentalScrollView"
+                android:onClick="zoomDropLocation"
+                android:padding="2dp"
+                android:src="@drawable/red_flag" />
+
+            <HorizontalScrollView
+                android:id="@+id/to_location_horizentalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/edit_to_location_imageVIew"
+                android:layout_toRightOf="@+id/to_location_imageVIew"
+                android:fillViewport="true"
+                android:paddingEnd="10dp">
+
+                <com.prts.pickcustomer.customviews.PickCCustomEditText
+                    android:id="@+id/to_lcation_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:focusableInTouchMode="false"
+                    android:gravity="left|center"
+                    android:hint="Cargo drop location"
+                    android:maxLines="1"
+                    android:onClick="pickDropLocation"
+                    android:padding="2dp"
+                    android:scrollbars="horizontal"
+                    android:text=""
+                    android:textColor="@color/appThemeTextColorLight"
+                    android:textColorHint="@color/appThemeTextHintColor"
+                    android:textSize="14sp" />
+
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/lock_to_location_imageVIew"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_alignBottom="@+id/to_location_horizentalScrollView"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/to_location_horizentalScrollView"
+                android:background="@color/appThemeBgColorDark"
+                android:onClick="unLockDropUpLocation"
+                android:padding="1dp"
+                android:src="@drawable/unlock"
+                android:visibility="visible" />
+
+
+            <ImageView
+                android:id="@+id/edit_to_location_imageVIew"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/to_location_horizentalScrollView"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/to_location_horizentalScrollView"
+                android:background="#44ffffff"
+                android:padding="18dp"
+                android:src="@drawable/edit"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.prts.pickcustomer.customviews.VerticalSeekBar
+        android:id="@+id/seekBar"
+        style="@style/MySeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_250"
+        android:layout_below="@+id/location_LLL"
+        android:layout_marginStart="@dimen/margin_15"
+        android:paddingLeft="@dimen/margin_6"
+        android:visibility="gone"
+        android:paddingRight="@dimen/margin_6"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/views_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/appThemeBgColorDark"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <FrameLayout
+            android:id="@+id/gridLayout_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/views_linear" />
+
+        <FrameLayout
+            android:id="@+id/booknow_linear_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp" />
+
+        <FrameLayout
+            android:id="@+id/driver_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar_activity_center"
+        android:layout_width="@dimen/width_60"
+        android:layout_height="@dimen/width_60"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/progressBar_activity_center">
+
+        <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+            android:id="@+id/textView_for_time_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/alert_time_dialog_bg"
+            android:padding="@dimen/margin_10"
+            android:text="1/2"
+            android:textColor="@color/appThemeTextColorLight"
+            android:textSize="@dimen/text_size_18"
+            android:visibility="gone" />
+
+
+        <com.prts.pickcustomer.customviews.AVLoadingIndicatorView
+            android:id="@+id/indicator"
+            style="@style/AVLoadingIndicatorView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            app:indicatorName="BallPulseIndicator" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar_for_time"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/height_80"
+            android:layout_height="@dimen/height_80"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/textView_for_time_2"
+            android:visibility="gone">
+
+            <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+                android:id="@+id/textView_for_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:background="@drawable/alert_time_dialog_bg"
+                android:padding="10dp"
+                android:text="60sp"
+                android:textColor="@color/appThemeTextColorLight"
+                android:textSize="@dimen/text_size_20"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

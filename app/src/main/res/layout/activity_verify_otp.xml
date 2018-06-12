@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appThemeBgColorDark"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/eneteredMobNoET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        app:hintEnabled="false">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/forgot_password_bg"
+            android:hint="Enter OTP"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/appThemeTextColorLight">
+
+            <requestFocus />
+        </EditText>
+    </android.support.design.widget.TextInputLayout>
+
+    <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eneteredMobNoET"
+        android:layout_marginLeft="10dp"
+        android:padding="@dimen/margin_10"
+        android:text="OTP has been sent to your registered mobile number" />
+
+    <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+        android:id="@+id/continueTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/appThemeBgColorLight"
+        android:gravity="center"
+        android:onClick="continueOnClick"
+        android:padding="@dimen/margin_15"
+        android:text="Continue"
+        android:textColor="@color/appThemeYellow" />
+</RelativeLayout>

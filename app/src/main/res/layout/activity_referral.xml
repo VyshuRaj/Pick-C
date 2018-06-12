@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="@android:color/transparent"
+    tools:context="com.prts.pickcustomer.referral.ReferralActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ref_11"
+        android:contentDescription="@null" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/iv"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/white"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/alert_dialog_bg"
+                android:gravity="center"
+                android:onClick="addRefery"
+                android:textSize="16sp"
+                android:id="@+id/invite_frnd"
+                android:text="REFER NOW"
+                android:textColor="@color/appThemeYellow"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/earning"
+                android:gravity="center"
+                android:text="Earnings : ₹0.0"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_horizontal"
+                android:onClick="termsAndCond"
+                android:padding="10dp"
+                android:id="@+id/abt_refer"
+                android:text="T &amp; C"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>

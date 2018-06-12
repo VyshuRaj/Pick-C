@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/padding_5"
+    tools:context=".referral.AddFriendActivity">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/name_til"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_40"
+            android:textColor="@color/appThemeTextColorLight"
+            android:hint="Enter name" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/mobile_til"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_til">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_40"
+            android:hint="Enter mobile no"
+            android:inputType="phone"
+            android:textColor="@color/appThemeTextColorLight"
+            android:maxLength="10" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email_til"
+        android:layout_below="@+id/mobile_til">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_40"
+            android:hint="Enter email"
+            android:textColor="@color/appThemeTextColorLight"
+            android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="saveRefery"
+        android:background="@drawable/alert_dialog_bg"
+        android:layout_below="@+id/email_til"
+        android:text="Save"
+        android:layout_marginTop="@dimen/margin_10"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

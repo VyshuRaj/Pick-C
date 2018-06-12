@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/appThemeBgColorDark">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:id="@+id/imageview"
+        android:background="@drawable/splash"
+        android:contentDescription="@string/pickc" />
+
+    <LinearLayout
+        android:id="@+id/bottomLinear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:background="@color/appThemeYellow"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+            android:id="@+id/tvsignup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:text="@string/sign_up"
+            android:onClick="signUpUser"
+            style="@style/MyCustomTextView"
+            />
+
+        <com.prts.pickcustomer.customviews.PickCCustomTextVIew
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_weight="1"
+            android:id="@+id/tvlogin"
+            android:text="@string/login"
+            android:onClick="loginUser"
+            style="@style/MyCustomTextView"
+             />
+    </LinearLayout>
+
+
+</RelativeLayout>
